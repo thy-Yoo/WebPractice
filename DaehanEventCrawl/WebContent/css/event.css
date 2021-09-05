@@ -1,0 +1,414 @@
+@charset "UTF-8";
+/*웹폰트*/
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+/*font-family: 'Nanum Myeongjo', serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&display=swap');
+
+
+*{
+	box-sizing: border-box; /*padding을 줘도 박스 크기는 그대로 유지. 콘텐츠가 줄어도 박스는 유지*/
+	font-family: 'Noto Sans KR', sans-serif;
+}
+html, body{
+	width:100%;
+	height:100%;
+	padding:0;
+	margin:0;
+}
+body{
+	/*border: 1px solid gray; /*레이아웃 제작을 위한 테스트용. 나중에 지울부분*/
+	position: absolute;
+	top: 0px;
+	overflow-y:scroll;
+	padding:0;
+	margin: 0;
+}
+a{
+	text-decoration: none;
+	display: block;
+}
+li{
+	list-style: none;
+}
+
+/***************************************************************************/
+header{
+	height: 180px;
+	width:100%;
+	min-width: 1100px;/*창 크기가 작아질때 메뉴 그대로 있기 위함. 수치조절필요*/
+	
+}
+footer{
+	background-color: #f2f2f2;
+	width:100%;
+	min-width: 1100px;
+	height:150px;
+}
+div.footer_all{
+	margin-left:100px;
+	padding-top:10px;
+}
+
+div.footer_all a.titleImg_footer{ /*사이트 타이틀 이미지*/
+	background-image: url("../images/cinemabox_title_sizing1_180x46_footer.png");
+	width: 180px; /*a.titleImg 크기에 맞출것*/
+	height:46px; /*a.titleImg 크기에 맞출것*/
+	float:left;
+	margin-top:40px;
+}
+div.footer_text{
+	font-size:14px;
+	color:#909090;
+	float: left;
+	margin-left:40px;
+}
+
+
+
+/*****************************************************************************/
+div.topmenu{
+	position:relative;
+	width: 1100px;
+	margin: 0 auto;
+	margin-top:10px;
+	z-index: 105; /*현재 mainmenu가 z-index:100이기 때문에 더 높은 수치여야 한다. z축을 위해서는 position도 relative로 설정.*/
+}
+div.topmenu ul{
+	position:relative;
+	height: 20px;
+}
+div.topmenu ul li{
+	margin-right: 15px;
+	height: 20px;
+}
+div.topmenu ul li.topmenuLeft{
+	float: left;
+}
+div.topmenu ul li.topmenuRight{
+	float: right;
+}
+
+div.topmenu ul li a{
+	font-size: 14px;
+	color: #545454;	
+}
+
+
+div.mainmenu{
+	position: absolute;
+	z-index: 100; /*누가 위로가고 뒤로갈지 (y축이 아닌, z임) 정하는 인덱스. */
+	/*background-color: olive;*/
+	top:0px;
+	width:100%;
+	min-width: 1100px; /*창 크기가 작아질때 메뉴 그대로 있기 위함. 수치조절필요*/
+	height: 110px; /*mainmenu 박스 크기*/
+	border-bottom: 1px solid #395179;
+	
+}
+div.mainmenu h1{
+	
+	position: absolute;
+	left: 50%;
+	top:24px;
+	height: 43px; /*a.titleImg 크기에 맞출것*/
+	margin:0 0 0 -90px;
+}
+div.mainmenu h1 a.titleImg{ /*사이트 타이틀 이미지*/
+	background-image: url("../images/cinemabox_title_sizing1_180x46.png");
+	width: 180px; /*a.titleImg 크기에 맞출것*/
+	height:46px; /*a.titleImg 크기에 맞출것*/
+	
+}
+
+/******************************************************************************************************/
+div.mainmenu div.nav{
+	display: block;
+	position:relative;
+	width:1100px;
+	margin:0 auto;
+}
+div.mainmenu div.nav ul{
+	position: relative;
+	width: 1100px;
+	margin:0 auto;
+}
+
+div.mainmenu div.nav li a{
+	position:absolute;
+	background-position: center 0;
+	text-indent: -99999px;
+	top:50px;
+}
+div.mainmenu div.nav li:nth-child(1)>a{
+	left:200px;
+}
+div.mainmenu div.nav li:nth-child(2)>a{
+	left:300px;
+}
+div.mainmenu div.nav li:nth-child(3)>a{
+	right:300px;
+}
+div.mainmenu div.nav li:nth-child(4)>a{
+	right:200px;
+}
+
+div.mainmenu div.nav ul li a.menu1_movie{
+	background-image: url("../images/mainmenu_영화_100x41.png");
+	width:100px; /*이미지 크기와 함께 바꿔줄 요소들*/
+	height:41px; /*이미지 크기와 함께 바꿔줄 요소들*/
+	
+}
+div.mainmenu div.nav ul li a.menu2_booking{
+	background-image: url("../images/mainmenu_예매_100x41.png");
+	width:100px; /*이미지 크기와 함께 바꿔줄 요소들*/
+	height:41px; /*이미지 크기와 함께 바꿔줄 요소들*/
+	
+}
+div.mainmenu div.nav ul li a.menu3_event{
+	background-image: url("../images/mainmenu_이벤트_100x41.png");
+	width:100px; /*이미지 크기와 함께 바꿔줄 요소들*/
+	height:41px; /*이미지 크기와 함께 바꿔줄 요소들*/
+}
+div.mainmenu div.nav ul li a.menu4_benefits{
+	background-image: url("../images/mainmenu_혜택_100x41.png");
+	width:100px; /*이미지 크기와 함께 바꿔줄 요소들*/
+	height:41px; /*이미지 크기와 함께 바꿔줄 요소들*/
+}
+
+/****************************************************************************/
+div.mainmenu_sub{
+	
+	
+}
+div.mainmenu_sub ul{
+	padding:0;
+	margin: 0;
+	height:50px;
+}
+div.mainmenu_sub ul li{
+	float: left;
+	margin-right: 20px;
+	top:12px;
+}
+
+div.mainmenu_sub ul.mainmenu_sub_part1{
+	display:none;
+	width:100%;
+	min-width:1100px;
+	height:50px;
+	margin:0 auto;
+	position: absolute;
+	top:109px;
+	color:white;
+	background-color: #12a3d6;
+	z-index: 101;/*header의 메인부분이 z-index:100, 수치가 높을수록 위에 있음.*/
+}
+div.mainmenu_sub ul li.submenu_moviechart{
+	position:relative;
+	left:385px;
+}
+div.mainmenu_sub ul li.submenu_moviefinder{
+	position:relative;
+	left:385px;
+}
+div.mainmenu_sub ul li a{
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+div.where{
+background-color: #f4f4f4;
+width:100%;
+height:40px;
+position: absolute;
+margin:0;
+padding:0;
+top: 110px; /*div.mainmenu의 height와 동일하게 할것.*/
+
+}
+div.where div{
+	width: 1100px;
+	position: relative; /*부모요소 기준으로 top:10px을 주기위헤*/
+	margin:0 auto;
+	top:8px;
+	color:#424242;
+	
+}
+/************************************************************************************************/
+div.contentTitle{
+	position: relative;
+	margin: 0 auto;
+	width: 1100px;
+	/*background-color:teal;*/
+	font-size: 28px;
+	font-weight:bold;
+	color:#354f91;/*#395179;*/
+	padding-top:20px;
+	padding-bottom: 20px;
+	
+}
+/**************************************************************************************************/
+div.searchPart{
+	position: relative;
+	margin: 0 auto;
+	width: 1100px;
+	height: 50px;
+	margin-top: 50px;
+}
+.search{
+	float: right;
+	
+	
+}
+.input-text{
+	width:240px;
+	height:40px;
+	text-align:left;
+	padding-left:10px;
+	font-size: 16px;
+	border: 1px solid #e0e0e0;
+	color: black;
+	border-radius: 4px;
+	
+}
+button.btn-search-input{
+	width:38px;
+	height: 38px;
+	margin:0;
+	padding:0;
+	position:absolute;
+	right: 1px;
+	top:1px;
+	border: none;
+	background-image: url("../images/search_38x38.png");
+	background-color: transparent;
+}
+button.btn-search-input:hover{
+	cursor: pointer;
+}
+
+
+
+
+
+
+/**************************************************************************************************/
+div.subMenu ul{
+	position: relative;
+	margin: 0 auto;
+	width: 1100px;
+	height:40px; /*li.subMenuTitle의 height와 맞출것.*/
+	padding:0;
+	
+}
+
+div.subMenu ul li.subMenuTitle{
+	width:25%;
+	float:left;
+	border: 1px solid #f1f1f1;
+	text-align: center;
+	height:40px;
+}
+div.subMenu ul li.subMenuTitle:hover{
+	cursor: pointer;
+}
+div.subMenu ul li.subMenuTitle a{
+	position:relative; /*글자를 수직높이에서 가운데 정렬하기 위함.*/
+	top:5px;
+	
+}
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*************************************************************************************8****/
+div.content{
+	overflow: hidden; /* 데이터 갯수에 따라 높이가 늘어나므로 자식요소에 따라 크기가 바뀔수 있도록 설정하였다.*/
+	width:1132px; /*header의 min-width와 맞춰주는 크기.*/
+	position:relative;
+	left:16px;
+	margin: 0 auto;
+	
+	
+	
+}
+div.content ul{
+	padding:0;
+}
+
+div.content ul li.eventContent{
+	position:relative;
+	float: left; 
+	width:250px; /*.eventImg의 width값과 같도록 설정*/
+	padding:0;
+	text-align: center;
+	list-style: none;
+	/*border: 1px solid #e0e0e0;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-bottom-left-radius:0px;
+	border-bottom-right-radius:0px;*/
+	margin-right: 32px;
+	margin-bottom:32px;
+}
+div.content ul li.eventContent a{
+	overflow: hidden;
+	display: block;
+}
+div.content ul li.eventContent a span{
+	display: block; /* span을 div블락처럼 정렬*/
+}
+.eventImg_box{
+	height:172px;
+	overflow: hidden; /*가로 비율은 유지하되, 그냥 넘치는 부분을 잘라내기위해*/
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	
+}
+.eventText_box{
+	background-color: white;
+	overflow: hidden;
+	border:1px solid #e0e0e0;
+	border-top:none;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	
+}
+.eventImg{
+	width: 250px;
+	position:relative;
+	top:0px;
+	
+	
+	
+}
+.eventTitle{
+	color: black;
+	padding-top:8px;
+	padding-bottom:8px;
+	font-size: 13px;
+}
+.eventDates{
+	color: #999999;
+	font-size: 12px;
+	padding-bottom: 14px;
+}
