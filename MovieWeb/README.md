@@ -68,7 +68,7 @@ public boolean dateCompare(Date d1, Date d2){
 ```
 
 ## 웹 페이지 결과물
-#### VipLounge 페이지
-<img src = "../imgs/vip_result.png">
-#### Event 페이지
-<img src = "../imgs/event_result.png">
+### VipLounge 페이지 <br>
+<img src = "../imgs/vip_result.png"> <br>
+### Event 페이지 <br>
+<img src = "../imgs/event_result.png"> <br>
