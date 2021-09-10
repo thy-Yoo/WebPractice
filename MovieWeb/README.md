@@ -66,9 +66,11 @@ public boolean dateCompare(Date d1, Date d2){
 -- 진행중인 이벤트 페이지 / 지난 이벤트 페이지에서 데이터를 처음부터 나눠서 가져올 예정이다.
  String sql="SELECT * FROM event_main2 WHERE event_term = '진행중인 이벤트' ;
 ```
+<br><br><br><br><br>
 
-## 웹 페이지 결과물
-### VipLounge 페이지 <br>
-<img src = "../imgs/vip_result.png"> <br>
-### Event 페이지 <br>
-<img src = "../imgs/event_result.png"> <br>
+## 웹 페이지 결과물 <br><br>
+<img src = "../imgs/vip_result.png">
+
+***
+
+<img src = "../imgs/event_result.png">
