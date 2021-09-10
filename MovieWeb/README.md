@@ -67,4 +67,6 @@ public boolean dateCompare(Date d1, Date d2){
  String sql="SELECT * FROM event_main2 WHERE event_term = '진행중인 이벤트' ;
 ```
 
-
+## 웹 페이지 결과물
+<img src = "imgs/vip_result.png">
+<img src = "imgs/event_result.png">
