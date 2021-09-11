@@ -1,0 +1,133 @@
+a:hover{
+	text-decoration: none !important;
+}
+
+/**************************************body***************************************/
+.event_board_list_body{
+	width:1100px;
+	margin:0 auto;
+}
+.boardlink:hover{
+	cursor: pointer;
+	color:white;
+	
+}
+.event_board_Menus{
+	margin-top:50px;
+	width:100;
+	height:50px;
+	background:#f1f4fb;
+	font-weight:bold;
+	color:#0088cc;
+}
+.event_board_categoryMenu{
+	width:33.3%;	
+	height:37px;
+	float:left;
+	padding-top:10px;
+	text-align:center;
+	margin:0px;
+	font-size: 20px;
+	
+}
+.event_board_categoryMenu:hover{
+border-bottom:3px solid #63387b;
+color:#63387b;
+}
+
+.event_board_list_row{
+	margin-top:40px;
+	margin-bottom:100px;
+}
+
+.event_board_list_tableList{
+	width:100%;
+	text-align:center;
+}
+.event_board_list_tableList thead{
+	font-size:15px;
+}
+.event_board_list_tableList tbody{
+	font-size:13px;
+}
+
+.event_board_list_no{
+	width:70px;
+}
+.event_board_list_category{
+	width:100px;
+}
+.event_board_list_title{
+	width:720px;
+}
+#event_board_list_table_content_no{
+	color:#ababab;
+}
+#event_board_list_table_content_category{
+	color:#676767;
+}
+#event_board_list_table_content_title{
+	color:#494949;
+}
+#event_board_list_table_content_release{
+	color:#676767;
+}
+
+
+
+.event_board_list_no,.event_board_list_category,.event_board_list_title,.event_board_list_release{
+	text-align: center;
+}
+
+
+.event_board_list_panel-body div table thead { /*no 구분 제목 발표일 있는곳*/
+	background-color:#354f91;
+	height:40px;
+	color:#f1f4fb;
+	
+}
+.event_board_list_content{
+	border-bottom: 2px dotted #f1f4fb;
+	height:35px;
+	padding:0;
+	margin:0;
+	
+}
+
+/*********************상세페이지*********************************/
+.board_detailPageTitle{
+	width:max-content;
+	color:#354f91;
+	font-size:28px;
+	font-weight: bold;
+	margin:50px auto 30px auto;
+}
+
+.board_detailContent{
+	width:1100px;
+	margin:80px auto 100px auto;
+}
+
+.beforeBtn{
+	width:100px;
+	height:50px;
+	margin:0 auto 100px auto;
+	font-size:20px;
+	border-radius: 2px;
+	border:1px solid #cccccc;
+	text-align: center;
+	
+}
+.beforeBtn a{
+	color:#354f91;
+	text-decoration: none;
+	display:inline-block;
+	width:100px;
+	height:50px;
+	padding-top:10px;
+}
+.beforeBtn a:hover{	
+	cursor:pointer;
+	color:#0c85d3;
+	text-decoration: none;
+}
