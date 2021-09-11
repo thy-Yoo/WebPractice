@@ -60,6 +60,13 @@ public String event_detail(HttpServletRequest request,HttpServletResponse respon
  스타일을 만들때에는 최대한 원하는 특정 태그에 class를 줘서 그 __클래스를 지정하여 스타일을 주도록 하자!!__ <br><br><br>
  
  ## 웹 페이지 결과물
- (수정 및 변경한 페이지 추가)<br><br>
- <img src = "../imgs/02_eventMainPage.png">
- <img src = "../imgs/02_eventTheaterPage.png">
+__진행중인 이벤트 카테고리별 페이지__ <br><br>
+ <img src = "../imgs/02_eventMainPage.png" style="width:49%">
+ <img src = "../imgs/02_eventTheaterPage.png" style="width:49%">
+ <br><br><br><br>
+ __이벤트 상세 페이지__ <br><br>
+ <img src = "../imgs/02_eventDetailPage.png" style="width:99%">
+ <br><br><br><br>
+ __당첨자 발표 페이지와 상세 페이지__ <br><br>
+ <img src = "../imgs/02_eventWinnerPage.png" style="width:99%">
+ <img src = "../imgs/02_eventWinnerDetailPage.png" style="width:99%">
