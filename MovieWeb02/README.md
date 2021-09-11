@@ -59,3 +59,7 @@ public String event_detail(HttpServletRequest request,HttpServletResponse respon
  처음 작업 할 때 그냥 a{} 에 속성을 주는게 편하다고 느낄 수 있겠지만, css가 방대해지면 문제가 생겼을 때 발견하기가 어렵다.<br>
  스타일을 만들때에는 최대한 원하는 특정 태그에 class를 줘서 그 __클래스를 지정하여 스타일을 주도록 하자!!__ <br><br><br>
  
+ ## 웹 페이지 결과물
+ (수정 및 변경한 페이지 추가)<br><br>
+ <img src = "../imgs/02_eventMainPage.png">
+ <img src = "../imgs/02_eventTheaterPage.png">
