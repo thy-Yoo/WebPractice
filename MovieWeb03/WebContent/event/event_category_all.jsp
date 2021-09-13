@@ -21,10 +21,10 @@
 	
 	<div class="event_header">
 		<div class="event_contentTitle">
-			<a class="event_otherLink" href="event_category_all.do" id="home">진행중인 이벤트</a>
+			<a class="event_otherLink" href="event_category_all.do">진행중인 이벤트</a>
 		</div>
 		<div class="event_otherLinkBox">
-			<a class="event_otherLink" href="event_last_event.do" id="profile"">지난 이벤트</a>
+			<a class="event_otherLink" href="event_last_event.do">지난 이벤트</a>
 		</div>
 		<div class="event_otherLinkBox">
 			<a class="event_otherLink" href="event_board_list.do">당첨자 발표</a>

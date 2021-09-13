@@ -316,6 +316,3 @@ div.content ul li.eventContent a span{
  
  /**********************************************************************************************/
  /* [ 전체  / 영화  / 극장 ] 메뉴 클릭 시, 메뉴 색상 변하게 하는 css */
-.subMenuTitle.active{
-	background-color: red;
-}
