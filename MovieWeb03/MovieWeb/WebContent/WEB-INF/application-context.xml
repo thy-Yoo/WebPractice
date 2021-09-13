@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+ <!-- <context:component-scan base-package=""> -->
+ <component-scan base-package="com.sist.model"/>
+</beans>

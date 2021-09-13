@@ -1,0 +1,44 @@
+@charset "UTF-8";
+.pagingDiv{
+	position:relative;
+	width:400px;
+	top:-50px;
+	margin:0 auto 30px auto;
+	text-align: center;
+	
+}
+.pagination{
+	text-align:center;
+	
+	margin:0 auto;
+	auto:0;
+}
+.pagination ul{
+	margin:0;
+}
+.pagination ul li{
+	display: inline-block;
+	
+	border-radius:3px;
+	width:40px;
+	height:40px;
+	margin:3px;
+	padding:0;
+	text-align: center;	
+}
+.pagination ul li.pagination_key{
+	background-color:#354f91;
+}
+.pagination ul li.pagination_number{
+	background-color: #2698cb;/*#354f91;*/
+}
+
+.pagination ul li a{
+	display:inline-block;
+	
+	width:40px;
+	height: 40px;
+	color:white;
+ 	font-size:17px;
+ 	line-height:40px;
+}

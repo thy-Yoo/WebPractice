@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+.viplounge_mycoupons{
+	text-align:center;
+}
+body.viplounge_body{
+	box-sizing: border-box; /*padding을 줘도 박스 크기는 그대로 유지. 콘텐츠가 줄어도 박스는 유지*/
+	font-family: 'Noto Sans KR', sans-serif;
+	width:100%;
+	min-width:1100px;
+	height:100%;
+	padding:0;
+	margin:0;
+	/* background-color:#fcf9f4; 밝은아이보리 */
+	background-color:white;
+
+	/*border: 1px solid gray; /*레이아웃 제작을 위한 테스트용. 나중에 지울부분*/
+	position: absolute;
+	top: 0px;
+	overflow-y:scroll;
+	padding:0;
+	margin: 0;
+}
+div.viplounge_all{
+	widht:1100px;
+	position:relative;
+	top:50px;
+	margin: 0 auto;
+}
+div.viplounge_info{
+	width:1100px;
+	height:401px;
+	margin:0 auto;
+	padding:0;
+	border: none;
+	background-image: url("../imgs/vip_info_blue.png");
+	background-repeat:no-repeat;
+	background-size: contain; /*div크기에 이미지 사이즈를 맞춤*/
+}
+
+div.viplounge_grade{
+	font-size: 50px;
+	color:white;
+	position:relative;
+	top:192px;
+	left:237px;
+}
+div.viplounge_textbox{
+	width:500px;
+	height:120px;
+	color:#1f3668;
+	text-align:center;
+	font-weight:bold;
+	position:relative;
+	top:110px;
+	left:400px;
+}
+div.viplounge_textbox div.viplounge_userdata{
+	position:relative;
+	top:10px;
+	left:20px;
+	font-size: 28px;
+}
+div.viplounge_textbox div.viplounge_userdata div.viplounge_iddata{
+	width:30%;
+	float:left;	
+	text-align:right;
+	color:#004b7d;
+}
+div.viplounge_textbox div.viplounge_userdata div.viplounge_gradedata{
+	width:18%;
+	float:left;
+	text-align:right;
+	color:#004b7d;
+}
+div.viplounge_textbox div.viplounge_userdata div.viplounge_basictext{
+	width:max-content;
+	float:left;
+}
+div.viplounge_textbox div.viplounge_pointdata{
+	width:max-content;
+	position:relative;
+	top:35px;
+	font-size: 20px;
+	margin:0 auto;
+}
+div.viplounge_textbox div.viplounge_pointdata div.viplounge_numberdata{
+	width:100px;
+	float:left;
+	text-align:right;
+	color:#004b7d;
+	
+}
+div.viplounge_textbox div.viplounge_pointdata div.viplounge_basictext{
+	width:100px;
+	float:left;
+	text-align:left;
+	
+}
+/*******************************************************************************/
+.viplounge_link{
+	font-size: 16px;
+}
+
+
+div.viplounge_link div.viplounge_linkMypage{
+	color:#1f3668;
+	position: relative;
+	left:264px;
+	float:left;
+	top:166px;
+	font-weight: bold;
+	
+}
+div.viplounge_link div.viplounge_mycoupons{
+	color:#1f3668;
+	position: relative;
+	top:166px;
+	left:140px;
+	float:left;
+	font-weight: bold;
+	padding-right:95px;
+	border-right: 2px solid #ddcde6;
+	width:max-content;
+}
+div.viplounge_link div.viplounge_linkCustomerCenter{
+	color:#1f3668;
+	position: relative;
+	top:166px;
+	left:50px;
+	float:left;
+	font-weight: bold;
+	padding-right:27px;
+	border-right: 2px solid #ddcde6;
+}
+
+div.viplounge_link a{
+	color:#1f3668;
+	text-decoration: none;
+}
+div.viplounge_link a:hover{
+	cursor: pointer;
+}
+div.viplounge_link div.viplounge_mycoupons div.viplounge_mycoupons_basictext{
+	position: relative;
+	float:left;
+}
+div.viplounge_link div.viplounge_mycoupons div.viplounge_mycoupons_numberdata{
+	position: relative;
+	float:left;
+	width:30px;
+	text-align:right;
+}
