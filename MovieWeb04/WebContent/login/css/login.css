@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+
+.loginSection{
+	/*정중앙에 고정하되, 가로방향 창 축소시 일정 크기 안에 고정되도록*/
+	width:100%;
+	min-width:1100px;
+	margin: 0 auto;
+	text-align: center;	
+	height: 400px;	
+}
+.loginTitle{
+	color: #1a408a;
+	font-size:24px;
+	font-weight: bold;
+	margin: 0 auto 80px auto;
+	width:400px;
+	padding-bottom:15px;
+	border-bottom: 1px solid #1a408a;
+	
+}
+
+
+.input__item{
+	margin:8px 0 8px 0;
+}
+
+.input__idpwBox{ /*입력박스 스타일*/
+	height: 50px;
+	width: 400px;
+	border-radius: 0;
+	border: 1px solid #dcdcdc;
+	padding-left:15px;
+	font-size:15px;
+	color:#bababa;
+}
+
+.site-btn{
+	width:400px;
+	height: 50px;
+	background-color: #1a408a; /*글자LOGIN 클래스loginTitle이랑 색 맞추기*/
+	border: none;
+	margin-top:10px;
+	color:white;
+	font-size:17px;
+	font-weight: 800;
+	line-height:17px;
+}

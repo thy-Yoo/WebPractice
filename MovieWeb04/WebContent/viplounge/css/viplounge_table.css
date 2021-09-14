@@ -1,0 +1,83 @@
+/*------------------------------------------------------------------
+    IMPORT FONTS
+-------------------------------------------------------------------*/
+
+
+
+/*------------------------------------------------------------------
+    SKELETON
+-------------------------------------------------------------------*/
+  
+
+.dmoain-pricing table {
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.dmoain-pricing table .domain-head {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  background: #1f3668; /*보라색*/
+}
+
+.dmoain-pricing table .domain-head th {
+  border-right: 2px solid #fff;
+}
+
+.dmoain-pricing table .domain-head th:last-child {
+  border-right: none;
+}
+
+.dmoain-pricing table th {
+  padding: 11px 0;
+  text-align: center;
+  font-weight: 600;
+}
+
+.dmoain-pricing table td {
+  padding: 23px 0;
+  text-align: center;
+  font-weight: 700;
+  color: #434648;
+  font-size:14px;
+}
+
+.dmoain-pricing table th,
+.dmoain-pricing tbody tr td:nth-child(1) {
+  text-transform: capitalize;
+}
+
+.dmoain-pricing tbody tr td:nth-child(1) {
+  font-size: 14px;
+  color: #000;
+  font-weight: 600;
+}
+
+/*-----------------------------------------------------------------*/
+
+div.viplounge_table {
+	width:1100px;
+	margin:0px auto 150px auto; /*상 우 하 좌*/
+
+}
+div.viplounge_table div.viplounge_container div.viplounge_table p{
+	text-align: center;
+	font-size: 50px;
+	font-weight: 800;
+	color:#1f3668; /*보라색*/
+}
+
+.viplounge_td1st{ /*왼쪽가장첫줄*/
+	background-color: #f1f4fb; /*연하늘색*/
+	border-right: 2px solid #fff;
+	border-bottom: 2px solid #fff;
+}
+.viplounge_tdContent{
+	border-right: 2px dotted #f1f4fb;
+	border-bottom: 2px dotted #f1f4fb;
+}
+}
