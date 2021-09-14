@@ -50,18 +50,6 @@
     <!-- Login Section End -->
 
 
-
-    <!-- Js Plugins -->
-    <script src="../login/js/jquery-3.3.1.min.js"></script>
-    <script src="../login/js/bootstrap.min.js"></script>
-    <script src="../login/js/player.js"></script>
-    <script src="../login/js/jquery.nice-select.min.js"></script>
-    <script src="../login/js/mixitup.min.js"></script>
-    <script src="../login/js/jquery.slicknav.js"></script>
-    <script src="../login/js/owl.carousel.min.js"></script>
-    <script src="../login/js/main.js"></script>
-
-
 </body>
 
 </html>
