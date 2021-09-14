@@ -29,7 +29,26 @@ session 부분 작성할 것.
 ```
 <br><br>
 #### 기능 추가 3 - session 데이터를 가져와서 페이지에 출력, 나누는 기능.
-DAO, Model부분, jsp파일의 c:if 부분 작성할 것.
+##### 로그인/비로그인 상태에 따라 다른 링크를 출현시키는 기능.
+```jsp
+<c:if test="${sessionScope.id==null }">
+ <!-- 비로그인 상태일 때 회원가입과 로그인 링크 출현-->
+ <a class="signup">회원가입</a>
+	<a class="login" href="../login/login.do">로그인</a>
+</c:if>
+<c:if test="${sessionScope.id!=null }">
+ <!-- 로그인 상태일 때 로그인정보(유저이름, 관리자인지 일반유저인지 등급표시)와 로그아웃 링크 출현 -->
+	<div class="main_header_loginInfo">
+		<table class="table" style="border: none">
+			<tr class="inline">
+				<td class="loginSessionInfoName">${sessionScope.name }(${sessionScope.admin=='y'?"관리자":"일반유저" })</td>
+				<td class="loginSessionBtnLogout"><a
+					href="../login/logout.do" class="btn btn-sm btn-danger">로그아웃</a></td>
+			</tr>
+		</table>
+	</div>
+</c:if>
+```
 
 ##### UserData를 Viplounge페이지에 뿌리는 기능 부분.
 ```java
