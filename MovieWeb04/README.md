@@ -42,13 +42,13 @@ session 부분 작성할 것.
  	<table class="table" style="border: none">
  		<tr class="inline">
  			<td class="loginSessionInfoName">${sessionScope.name }(${sessionScope.admin=='y'?"관리자":"일반유저" })</td>
-			<td class="loginSessionBtnLogout"><a href="../login/logout.do" class="btn btn-sm btn-danger">로그아웃</a></td>
+			<td class="loginSessionBtnLogout"><a href="../login/logout.do">로그아웃</a></td>
 		</tr>
 	</table>
 	</div>
 </c:if>
 ```
-
+<br><br>
 ##### UserData를 Viplounge페이지에 뿌리는 기능 부분.
 ```java
  public ViploungeVO viploungeUserData(String idstr) { //string형 변수ID를 받아와서 (idstr)
