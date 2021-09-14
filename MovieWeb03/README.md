@@ -3,5 +3,11 @@
 페이지 나누는 DAO 함수부분 작성할 것.
 <br><br><br><br>
 ## 웹 페이지 결과물
-__지난 이벤트 페이징__ <br><br>
- <img src = "../imgs/03_last_event_Paging.png" style="width:99%">
+__로그인 페이지__ <br><br>
+ <img src = "../imgs/04_loginPage.PNG" style="width:99%">
+ 
+ __로그인 상태 : 유저 멤버쉽 데이터를 출력하는 Viplounge 페이지_ <br><br>
+  <img src = "../imgs/04_loginSession_viplounge.PNG" style="width:99%">
+
+__비 로그인 상태 : 기본 Viplounge 페이지_ <br><br>
+  <img src = "../imgs/04_loginSessionNull_viplounge.PNG" style="width:99%">
