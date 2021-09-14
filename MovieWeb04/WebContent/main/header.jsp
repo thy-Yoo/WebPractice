@@ -25,8 +25,7 @@
 				<table class="table" style="border: none">
 					<tr class="inline">
 						<td class="loginSessionInfoName">${sessionScope.name }(${sessionScope.admin=='y'?"관리자":"일반유저" })</td>		
-						<td class="loginSessionBtnLogout"><a href="../login/logout.do"
-							class="btn btn-sm btn-danger">로그아웃</a></td>
+						<td class="loginSessionBtnLogout"><a href="../login/logout.do">로그아웃</a></td>
 					</tr>
 				</table>
 			</div>
