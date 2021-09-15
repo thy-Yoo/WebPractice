@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+
+/*********************************header***************************************/
+.event_header{
+	color:#354f91;
+	font-size: 28px;
+	font-weight:bold;
+	width:1100px;
+	margin: 0 auto 50px auto;
+}
+div.event_contentTitle{
+	position: relative;
+	margin: 0 auto;
+	width: 1100px;
+	/*background-color:teal;*/
+	font-size: 28px;
+	font-weight:bold;
+	color:#354f91;/*#395179;*/
+	padding-top:20px;
+	padding-bottom: 20px;
+	
+}
+
+ div.event_otherLinkBox{
+ 	font-size:14px;
+ 	width:120px;
+ 	float:right;
+ }
+
+div.event_otherLinkBox a.event_otherLink{
+	color: #0088cc;
+}
+
+div.event_otherLinkBox a.event_otherLink:hover,
+div.event_otherLinkBox a.event_otherLink:focus{
+	color: #0099e6;
+}
+
+div.event_otherLinkBox a.event_otherLink:active{
+	color: #0077b3;
+}

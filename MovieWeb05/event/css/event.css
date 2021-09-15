@@ -1,0 +1,316 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+/*font-family: 'Nanum Myeongjo', serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&display=swap');
+/**/
+}
+body.event_body{
+	box-sizing: border-box; /*padding을 줘도 박스 크기는 그대로 유지. 콘텐츠가 줄어도 박스는 유지*/
+	font-family: 'Noto Sans KR', sans-serif;
+	width:100%;
+	height:100%;
+	padding:0;
+	margin:0;
+
+	/*border: 1px solid gray; /*레이아웃 제작을 위한 테스트용. 나중에 지울부분*/
+	position: absolute;
+	top: 0px;
+	overflow-y:scroll;
+	padding:0;
+	margin: 0;
+}
+li{
+	list-style: none;
+}
+
+a:hover{
+	text-decoration: none; !important;
+}
+
+/***************************************************************************/
+
+
+div.where{
+background-color: #f4f4f4;
+width:100%;
+height:40px;
+position: relative;
+margin:0;
+padding:0;
+top: 0; /*div.mainmenu의 height와 동일하게 할것.*/
+
+}
+div.where div{
+	width: 1100px;
+	position: relative; /*부모요소 기준으로 top:10px을 주기위헤*/
+	margin:0 auto;
+	top:8px;
+	color:#424242;
+	
+}
+/************************************************************************************************/
+div.event_contentTitle{
+	position: relative;
+	margin: 0 auto;
+	width: 1100px;
+	/*background-color:teal;*/
+	font-size: 28px;
+	font-weight:bold;
+	color:#354f91;/*#395179;*/
+	padding-top:20px;
+	padding-bottom: 20px;
+	
+}
+
+ div.event_otherLink{
+ 	font-size:14px;
+ 	width:100px;
+ 	float:right;
+ 
+ }
+
+/**************************************************************************************************/
+div.searchPart{
+	position: relative;
+	margin: 0 auto;
+	width: 1100px;
+	height: 50px;
+	margin-top: 50px;
+}
+.search{
+	float: right;
+	
+	
+}
+.input-text{
+	width:240px;
+	height:40px;
+	text-align:left;
+	padding-left:10px;
+	font-size: 16px;
+	border: 1px solid #e0e0e0;
+	color: black;
+	border-radius: 4px;
+	
+}
+.btn-search-input{
+	width:38px;
+	height: 38px;
+	margin:0;
+	padding:0;
+	position:absolute;
+	right: 1px;
+	top:1px;
+	border: none;
+	background-image: url("../imgs/search_38x38.png");
+	background-color: white;
+	border-left: 1px solid #eeeeee;
+}
+button.btn-search-input:hover{
+	cursor: pointer;
+}
+button.btn-search-input:active{
+	background-image: url("../imgs/search2_38x38.png");
+}
+
+
+
+
+
+/**************************************************************************************************/
+div.event_subMenu ul{
+	position: relative;
+	margin: 0 auto;
+	width: 1100px;
+	height:40px; /*li.subMenuTitle의 height와 맞출것.*/
+	padding:0;	
+}
+
+div.event_subMenu ul li.subMenuTitle{
+	width:33%;
+	float:left;
+	border: 1px solid #f1f1f1;
+	text-align: center;
+	height:40px;
+}
+div.event_subMenu ul li.subMenuTitle:hover{
+	cursor: pointer;
+	border-bottom: 3px solid #354f91;
+}
+div.event_subMenu ul li.subMenuTitle a{
+	position:relative; /*글자를 수직높이에서 가운데 정렬하기 위함.*/
+	color:black;
+	top:5px;
+	text-decoration: none;
+	display: block;
+}
+
+	
+
+
+/*************************************************************************************8****/
+div.content{
+	overflow: hidden; /* 데이터 갯수에 따라 높이가 늘어나므로 자식요소에 따라 크기가 바뀔수 있도록 설정하였다.*/
+	width:1132px; /*header의 min-width와 맞춰주는 크기.*/
+	position:relative;
+	left:16px;
+	margin: 10px auto 80px auto;
+	
+	
+	
+}
+div.content ul{
+	padding:0;
+}
+
+div.content ul li.eventContent{
+	position:relative;
+	float: left; 
+	width:250px; /*.eventImg의 width값과 같도록 설정*/
+	padding:0;
+	text-align: center;
+	list-style: none;
+	/*border: 1px solid #e0e0e0;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-bottom-left-radius:0px;
+	border-bottom-right-radius:0px;*/
+	margin-right: 32px;
+	margin-bottom:32px;
+}
+div.content ul li.eventContent a{
+	overflow: hidden;
+	display: block;
+	text-decoration: none;
+	display: block;
+}
+div.content ul li.eventContent a span{
+	display: block; /* span을 div블락처럼 정렬*/
+}
+/*
+.eventImg_box{
+	height:172px;
+	overflow: hidden; /*가로 비율은 유지하되, 그냥 넘치는 부분을 잘라내기위해
+	border:1px solid #e0e0e0;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	
+}*/
+.eventText_box{
+	background-color: white;
+	overflow: hidden;
+	border:1px solid #e0e0e0;
+	border-top:none;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	
+}
+
+.eventImgBox{
+	width: 250px;
+	height:172px;
+	overflow:hidden;
+	border:1px solid #e0e0e0;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+
+.eventImg{
+	width:250px;
+	height:auto;
+	
+}
+.eventTitle{
+	color: black;
+	padding-top:8px;
+	padding-bottom:8px;
+	font-size: 12px;
+}
+.eventDates{
+	color: #999999;
+	font-size: 12px;
+	padding-bottom: 14px;
+}
+
+
+
+/***********************페이지 나누는 버튼 *****************************************/
+.event_list_row{
+	font-family: 'Noto Sans KR', sans-serif;
+	width:500px;
+	position:relative;
+	margin:0 auto;	
+	text-align: center;
+}
+
+.event_list_page a{
+	text-decoration: none;
+}
+
+.event_list_pagination{
+	border:5px solid black;
+	text-align:center;
+	margin:20px auto 50px auto ;
+	width:max-content;
+	height:50px;
+}
+.event_list_pagination li{
+	width:max-content;
+	float:left;
+}
+
+.event_list_pagination a{
+	padding:0 10px;
+}
+.event_list_pagination a:hover{
+	text-decoration: none;
+}
+.event_list_pagination a:focus{
+	background-color: blue;
+}
+/**************************************************************************************************************/
+/*****아래부터는 이벤트 상세 페이지*************************************************************************************/
+.detailPageTitle{
+	width:max-content;
+	color:#354f91;
+	font-size:28px;
+	font-weight: bold;
+	margin:50px auto 30px auto;
+}
+.detailInfoBox{
+	margin:20px auto 50px auto;
+}
+.detailInfoTitle{
+	width:300px;
+	color:#333333;
+	font-size:17px;
+	font-weight:bold;
+	margin:0 auto 0 auto;
+	text-align: center;
+}
+.detailInfoTerm{
+	width:300px;
+	color:#555555;
+	font-size:13px;
+	margin:2px auto 0 auto;
+	text-align: center;
+}
+.detailInfoContent{
+	width:500px;
+	height: auto;
+	margin:0 auto 70px auto;
+}
+.topBtn{
+	background-image:url("../imgs/topBtn.png");
+	width:80px;
+	height:80px;
+	background-size: contain;
+	position: fixed;
+	bottom:20px;
+	right: 40px;
+	z-index:999;
+}
+ .event_ulli{
+ 	margin:0; 
+ }
