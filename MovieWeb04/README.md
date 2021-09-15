@@ -3,8 +3,8 @@
 session 부분 작성할 것.
 #### 기능 추가 2 - 다른 테이블을 참조하여 원하는 테이블에 데이터를 Insert하는 기능
 ##### 2.1 DAO : 회원DB가 업데이트 되면 유저의 vip혜택 정보를 담는 멤버십 테이블 데이터도 업데이트 시킨다.
-해당 메소드는 멤버십페이지(Viplounge)를 방문할 때 업데이트 되도록 해두었다. ...Viplounge모델 참고<br>
 ```java
+/* 해당 메소드는 멤버십페이지(Viplounge)를 방문할 때 업데이트 되도록 해두었다. ...Viplounge모델 참고 */
  public ViploungeVO memberDataUpdate() {
   ViploungeVO vo = new ViploungeVO();
   try {
