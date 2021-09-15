@@ -100,8 +100,8 @@ public String event_category_movie(HttpServletRequest request,HttpServletRespons
 3. 각 메뉴를 클릭할 때 servlet에 selectCategoryData를 전송한다. <br>
 4. 검색 기능을 클릭할 때 servlet에 searchData를 전송한다. <br>
 5. DAO에서 db data를 뽑아오는 함수에서 selectCategoryData와 searchData를 매개변수로 하여 sql 조건문에서 <br>
-```oracle sql
-"WHERE event_category='"+selectCategoryData+"' AND event_title='"+searchData+"'" --...생략...
+```java
+sql = "WHERE event_category='"+selectCategoryData+"' AND event_title='"+searchData+"'" //...생략...
 ```
 과 같은 형식으로 구현하면, View도 DAO메소드도 Servlet도 더 간결한 형태로 짤 수 있지 않을까.. 라는 생각을 한다<br>
 <br>
