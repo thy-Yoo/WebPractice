@@ -88,10 +88,10 @@ public String event_category_movie(HttpServletRequest request,HttpServletRespons
 #### 고찰
 
 이벤트 페이지에 관해 점점 기능을 추가할수록 처음의 구조설정이 비효율적이었나? 라는 생각이 들었다.<br>
-처음 작업을 할 때 Servlet이 어려워서, 단순하고 직관적으로 page만 주고받는 형태로 구현하였었다.<br>
-(	all 		category page는 		all.do	와 연결되어 	all 		data를 출력, <br>
-	movie 	category page는 	movie.do	와 연결되어 	movie 	data를 출력, <br>
-	theater category page는	theater.do와 연결되어 	theater data를 출력하는 형태) <br>
+처음 작업을 할 때 Servlet이 어려워서, 단순하고 직관적으로 page만 주고받는 형태로 구현하였었다.<br><br>
+	all category page는 all.do와 연결되어 all data를 출력, <br>
+	movie category page는 movie.do와 연결되어 movie data를 출력, <br>
+	theater category page는 theater.do와 연결되어 theater data를 출력하는 형태<br>
 즉, 이벤트 페이지 하나가 총 세페이지로 되어 있어서 [전체 / 영화 / 극장] 이 각각의 페이지와 그에 매핑된 컨트롤러가 있는 상태.<br>
 
 지금 드는 생각은, <br>
