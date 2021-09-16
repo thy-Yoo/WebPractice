@@ -1,0 +1,60 @@
+### 개인기록용
+#### 페이지 구조 변경 (jsp, servlet, DAO 메소드 변경)
+
+기존 페이지 구성은 category_all.jsp, category_movie.jsp, category_theater.jsp 세개로<br>
+같은 레이아웃인데도 jsp가 3개 있고, 비슷한 동작을 하는데도 세번의 작업이 필요했다. 때문에 <br>
+event_main.jsp 라는 하나의 페이지로 통일하였다.<br><br>
+
+각 메뉴에 링크를 달아서, servlet이 해당 메뉴를 클릭하면 요청을 받도록 한다.<br>
+```jsp
+<li class="subMenuTitle"><a id="subMenu_total" href="event_category_all.do">전체</a></li>
+<li class="subMenuTitle"><a id="subMenu_movie" href="event_category_movie.do">영화</a></li>
+<li class="subMenuTitle"><a id="subMenu_theater" href="event_category_theater.do">극장</a></li>
+```
+<br><br>
+__- 기본 페이지__ <br>
+Controller역할을 하는 EventMainModel의 기본 구조는 아래와 같다.<br>
+```java
+@Controller
+public class EventMainModel {
+		/*************************기본 페이지***************************************/	
+	   @RequestMapping("event/event_main.do") //1. event_main.do랑 연결되면 이벤트 메인 페이지와 연결한다.
+	   public String event_main(HttpServletRequest request,HttpServletResponse response)
+	   { 
+		   String selectCategoryData = "전체"; //2. 이벤트 메인 페이지는 "전체" 데이터를 출력할 것이기에 카테고리를 "전체"로 저장한다.
+		   String thisPage = "event_category_all.do"; //3. 현재의 페이지 주소도 event_category_all.do 임을 저장한다. (검색 기능을 위헤)
+		   String searchFind = null; //4. 첫 페이지 요청 시에는 검색을 하지 않으므로 검색값은 null이다.
+		   
+		   EventMainDAO dao = new EventMainDAO(); 
+		   List<EventVO> list = dao.eventMainDataList(selectCategoryData, searchFind);	//"전체"와 "검색한 값"을 전송한다.
+		   
+		   request.setAttribute("thisPage",thisPage); //jsp에게 thisPage에 해당하는 값을 알려준다.
+		   request.setAttribute("list", list);
+		   request.setAttribute("main_jsp", "../event/event_main.jsp");
+		   return "../main/main.jsp";
+	   }
+```
+__- 전체/영화/카테고리 기능__ <br>
+그리고 각 카테고리에 대한 기능을 수행할 메소드는 아래와 같다.<br>
+```java
+@RequestMapping("event/event_category_all.do") //1. View에서 전체 카테고리를 요청하면
+	   public String event_categoryIsAll(HttpServletRequest request,HttpServletResponse response)
+	   { 
+		   String selectCategoryData = "전체"; //2. 선택한 카테고리가 "전체"임을 저장하고,
+		   String thisPage = "event_category_all.do"; //3. 검색기능 구현을 위한 페이지 주소도 all.do임을 저장한다.
+		   String searchFind = null; //4. 첫 페이지 요청 시 검색값은 null인데,
+		   searchFind = request.getParameter("eventFindText"); //5. 만일 View에서 name="eventFindText"인 곳에 데이터가 입력되면 데이터를 받아온다.
+		   EventMainDAO dao = new EventMainDAO();
+		   List<EventVO> list = dao.eventMainDataList(selectCategoryData, searchFind);	//"전체" 와 "검색한 값"을 사용할 수 있도록 전송하고
+		   
+		   System.out.println("선택한 카테고리 : "+selectCategoryData); //확인을 위해 썼다.
+		   request.setAttribute("thisPage",thisPage); //현재 페이지 값과
+		   request.setAttribute("list", list); //View에서 필요한 리스트 값을 전송한다.
+		   request.setAttribute("main_jsp", "../event/event_main.jsp");
+		   return "../main/main.jsp";
+	   }
+```
+영화, 극장도 위와 완전히 동일한 구조이며, 지난 이벤트 페이지도 검색 기능을 위해 searchFind를 추가하였다.<br><br><br>
+그리고, View에서 전송받은 값을 이용하여 데이터를 분류할 수 있도록 DAO의 메소드를 수정하였다.<br><br>
+__-DAO 메소드__ <br>
+
