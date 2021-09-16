@@ -62,6 +62,7 @@ __-DAO 메소드__ <br>
 event_MovieData_Finder(영화 리스트 중 검색기능 추가), ... 이런식으로 하나의 기능을 구현할 때마다 메소드를 추가하였었는데,<br>
 이번에는 __최대한 하나의 함수로 모든 기능을 이용할 수 있도록__ 바꾸어보았다. <br><br>
 ```java
+//event_main.jsp 에서 이용할 함수이다.
 public List<EventVO> eventMainDataList(String whatCategory, String whatFind) //카테고리 값과, 검색한 값을 이용할 것이다.
 	   {
 		   List<EventVO> list=new ArrayList<EventVO>();
@@ -101,3 +102,45 @@ public List<EventVO> eventMainDataList(String whatCategory, String whatFind) //�
 			   
 			   ps=conn.prepareStatement(sql);	
 ```
+지난 이벤트 페이지 함수에도 searchFind 매개변수를 추가해주었다. sql구문에 서브쿼리가 많으니 그부분만 주의하면 된다.<br>
+```java
+public List<EventVO> eventLastEventData_Paging(int page, String whatFind){
+			
+			List<EventVO> list = new ArrayList<EventVO>();
+			try {
+				getConnection();
+				String sql;
+				System.out.println("들어온데이터 확인1: "+ whatFind);
+				if(whatFind == null) {
+					 sql="SELECT mno,event_category,event_poster,event_title,event_term,event_state,event_content,rnum "
+						     +"FROM (SELECT mno,event_category,event_poster,event_title,event_term,event_state,event_content,rownum as rnum "
+						     +"FROM (SELECT mno,event_category,event_poster,event_title,event_term,event_state,event_content "
+						     +"FROM event_main2 WHERE event_poster IS NOT NULL AND event_state = '지난 이벤트' )) "
+						     +"WHERE rnum BETWEEN ? AND ?";
+				}else {
+					sql="SELECT mno,event_category,event_poster,event_title,event_term,event_state,event_content,rnum "
+						     +"FROM (SELECT mno,event_category,event_poster,event_title,event_term,event_state,event_content,rownum as rnum "
+						     +"FROM (SELECT mno,event_category,event_poster,event_title,event_term,event_state,event_content "
+						     +"FROM event_main2 WHERE event_poster IS NOT NULL AND event_state = '지난 이벤트' AND "
+						     +"event_title LIKE '%" + whatFind + "%' )) "
+						     +"WHERE rnum BETWEEN ? AND ?";
+				}
+				/*..생략..*/
+```
+총 페이지 갯수를 구하는 함수도 같은 방식이다. 매개변수 추가해주고, if문으로 sql구문 분류.<br>
+<br><br>
+## 웹 페이지 결과물
+똑같이 "코다"라는 검색어를 입력했을 때,<br>
+전체 카테고리 / 극장 카테고리 / 지난 이벤트 페이지에서 각각에 알맞는 정보를 출력한 결과물을 첨부한다.<br>
+(데이터 자체가 "코다"이벤트의 경우 전부 영화 카테고리여서 같은 결과물이라 영화 페이지는 첨부하지 않았다.)<br>
+__전체 카테고리 페이지에서 "코다"를 검색한 경우__ <br>
+<img src = "../imgs/06_allFind.PNG" width="99%"><br>
+===
+__극장 카테고리 페이지에서 "코다"를 검색한 경우__ <br>
+<img src = "../imgs/06_theaterFind.PNG" width="99%"><br>
+===
+__지난 이벤트 페이지에서 "코다"를 검색한 경우__ <br>
+<img src = "../imgs/06_lastFind.PNG" width="99%"><br>
+===
+
+__:D__
