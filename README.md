@@ -48,9 +48,9 @@
  
 ##### 06
 - __event page 구조를 바꾸었다.__ <br>
- 기존 페이지는 (ec;event_category) ec_all.jsp, ec_movie.jsp, ec_theater.jsp 로 같은 레이아웃인데도 세페이지로 나눠져 있었는데<br>
- event_main.jsp 라는 하나의 페이지로 변경해주었다.
-- page에 맞게 servlet을 변경하였다. <br>
+ 기존 페이지는 같은 레이아웃인데도 (ec;event_category) ec_all.jsp, ec_movie.jsp, ec_theater.jsp 이렇게<br.
+ 세페이지로 나눠져 있었어서 event_main.jsp 라는 하나의 페이지로 변경해주었다.
+- page에 맞게 servlet과 관련 DAO 메소드들을 변경하였다. <br>
 - 지난 이벤트 페이지에도 __검색기능을 구현__ 하였다.<br>
 
 ##### 앞으로 해야할 작업.
