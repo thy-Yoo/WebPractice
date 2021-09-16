@@ -113,7 +113,8 @@ sql = "WHERE event_category='"+selectCategoryData+"' AND event_title LIKE '%"+se
 
 __화이팅!!__ <br>
 
-## 웹 페이지 결과물
-__검색 기능을 구현한 진행중인 페이지__
-<img src = "../../imgs/05_search.PNG" width="99%">
-<img src = "../../imgs/05_search2.PNG" width="99%">
+## 웹 페이지 결과물<br>
+### 검색 기능을 구현한 진행중인 페이지__ <br>
+<img src = "../imgs/05_search.PNG" width="99%">
+===
+<img src = "../imgs/05_search2.PNG" width="99%">
