@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+.detailInfoContent_Img{
+	/*이상하게  이벤트페이지-상세페이지의 씨네가든 이미지만 엇나가 있어서 아래속성으로 해결하였다.*/
+	max-width: -webkit-fill-available; /*크롬에서*/
+	max-width: -moz-available; /*파이어폭스에서*/
+
+}
