@@ -133,14 +133,14 @@ public List<EventVO> eventLastEventData_Paging(int page, String whatFind){
 똑같이 "코다"라는 검색어를 입력했을 때,<br>
 전체 카테고리 / 극장 카테고리 / 지난 이벤트 페이지에서 각각에 알맞는 정보를 출력한 결과물을 첨부한다.<br>
 (데이터 자체가 "코다"이벤트의 경우 전부 영화 카테고리여서 같은 결과물이라 영화 페이지는 첨부하지 않았다.)<br>
-__전체 카테고리 페이지에서 "코다"를 검색한 경우__ <br>
-<img src = "../imgs/06_allFind.PNG" width="99%"><br>
+##### 전체 카테고리 페이지에서 "코다"를 검색한 경우 <br>
+<img src = "../imgs/06_allFind.png" width="99%"><br>
 ===
-__극장 카테고리 페이지에서 "코다"를 검색한 경우__ <br>
-<img src = "../imgs/06_theaterFind.PNG" width="99%"><br>
+##### 극장 카테고리 페이지에서 "코다"를 검색한 경우 <br>
+<img src = "../imgs/06_theaterFind.png" width="99%"><br>
 ===
-__지난 이벤트 페이지에서 "코다"를 검색한 경우__ <br>
-<img src = "../imgs/06_lastFind.PNG" width="99%"><br>
+##### 지난 이벤트 페이지에서 "코다"를 검색한 경우 <br>
+<img src = "../imgs/06_lastFind.png" width="99%"><br>
 ===
 
 __:D__
