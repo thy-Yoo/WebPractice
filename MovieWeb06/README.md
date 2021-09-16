@@ -129,6 +129,52 @@ public List<EventVO> eventLastEventData_Paging(int page, String whatFind){
 ```
 총 페이지 갯수를 구하는 함수도 같은 방식이다. 매개변수 추가해주고, if문으로 sql구문 분류.<br>
 <br><br>
+#### 잘못된 메소드 수정
+Viplounge의 memberDataUpdate()와 Viplounge의 viploungeUserData()가 잘못되었음을 알아차리지 못했었다.<br>
+시간적인 결과물에 문제가 없었는데 (Oracle Developer로 member table을 참조하여 viplounge table도 업데이트 됨을 확인)<br>
+(실제 viplounge 페이지에서도 정보가 잘 출력됨을 확인)<br>
+콘솔창에서 "부적합한 열 인덱스"라는 에러메세지를 보았다. <br>
+원래 소스는 아래와 같다. <br>
+```java
+/* UserData()부분*/
+ps=conn.prepareStatement(sql); ps.setString(1, idstr); ResultSet rs=ps.executeQuery();
+rs.next();
+vo.setMno(rs.getInt(1));
+vo.setUserid(rs.getString(2));
+vo.setUsergrade(rs.getString(3));
+vo.setTotal_point(rs.getInt(4));
+vo.setTotal_ticketnums(rs.getInt(5));
+rs.close();
+
+/* DataUpdate()부분 */
+ResultSet rs=ps.executeQuery();
+vo.setUserid(rs.getString(1));
+rs.next();
+rs.close();
+```
+오류를 고친 소스는 아래와 같다.<br>
+```java
+/* UserData()부분*/
+ps=conn.prepareStatement(sql); ps.setString(1, idstr); ResultSet rs=ps.executeQuery();
+while(rs.next()) {
+	vo.setMno(rs.getInt(1));
+	vo.setUserid(rs.getString(2));
+	vo.setUsergrade(rs.getString(3));
+	vo.setTotal_point(rs.getInt(4));
+	vo.setTotal_ticketnums(rs.getInt(5));
+}
+/* DataUpdate()부분*/
+ResultSet rs = ps.executeQuery();
+while(rs.next()){
+	vo.setUserid(rs.getString(1));
+}
+rs.close();
+```
+while(re.next())를 하면, 데이터가 없을때까지(?) vo에 값을 넣는다.. 같은데 <br>
+list형이 아니라 vo형에 대한 작업이어서 반복문이 필요 없을 줄 알았는데.. 이해가 아직 안간다.<br>
+userid, usergrade, userpoint 다 잘 저장되고 잘 불러왔는데 어떤 부분이 문제인지...? <br>
+이부분 꼭 이해해야한다 ㅠㅠ 공부하자!! <br><br><br>
+
 ## 웹 페이지 결과물
 똑같이 "코다"라는 검색어를 입력했을 때,<br>
 전체 카테고리 / 극장 카테고리 / 지난 이벤트 페이지에서 각각에 알맞는 정보를 출력한 결과물을 첨부한다.<br>
