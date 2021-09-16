@@ -112,3 +112,8 @@ sql = "WHERE event_category='"+selectCategoryData+"' AND event_title LIKE '%"+se
 어쩌면 과제가 끝난 후 Spring에 들어가면 더 단순한 형태를 배울지도 모르겠다.<br>
 
 __화이팅!!__ <br>
+
+## 웹 페이지 결과물
+__검색 기능을 구현한 진행중인 페이지__
+<img src = "../../imgs/05_search.PNG" width="99%">
+<img src = "../../imgs/05_search2.PNG" width="99%">
