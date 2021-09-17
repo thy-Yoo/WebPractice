@@ -15,7 +15,7 @@ public class LoginDAO {
 	// SQL문장 전송 객체
 	private PreparedStatement ps;
 	// 오라클 서버 주소
-	private final String URL = "jdbc:oracle:thin:@litlyoo:1521:XE";
+	private final String URL = "jdbc:oracle:thin:@오라클주소:1521:XE";
 
 	// 1. 드라이버 등록
 	public LoginDAO() {
@@ -28,7 +28,7 @@ public class LoginDAO {
 	// 2. 오라클 연결
 	public void getConnection() {
 		try {
-			conn = DriverManager.getConnection(URL, "ouo", "litl");
+			conn = DriverManager.getConnection(URL, "오라클id", "오라클pw");
 			// conn hr/happy
 		} catch (Exception ex) {
 		}
