@@ -12,73 +12,65 @@ public class JsonMaking {
 
 	public static void main(String[] args) {
 		
-		// 1) ¾î¶² ·ÎÁ÷¿¡ ÀÇÇØ VO¿¡ °ªÀ»  ´ã´Â´Ù.
-								// ÇöÀç´Â DB, DAO°¡ ¾øÀ¸¹Ç·Î Á÷Á¢ °ªÀ» ³Ö¾îÁÖ°Ú´Ù.
-								/*
-								 *	userNm : À¯Áö¿¬,
-								 *	emailAddr : jyy2112@kico.co.kr
-								 *	phonenum : 010-3258-3707
-									
-								 *	userNm : È«Èñ¼ö,
-								 *	emailAddr : hhs3861@naver.com
-								 *	phonenum : 		
-								 */
+		// 1) ì–´ë–¤ ë¡œì§ì— ì˜í•´ VOì— ê°’ì„  ë‹´ëŠ”ë‹¤.
+		// í˜„ì¬ëŠ” DB, DAOê°€ ì—†ìœ¼ë¯€ë¡œ ì§ì ‘ ê°’ì„ ë„£ì–´ì£¼ê² ë‹¤.
+								
 		DataVO dataVo = new DataVO();
-		dataVo.setUserNm("À¯xx");
+		dataVo.setUserNm("ìœ xx");
 		dataVo.setEmailAddr("xxx@kico.co.kr");
 		dataVo.setPhonenum("010-3258-xxxx");
 							
 		DataVO dataVo2 = new DataVO();
-		dataVo2.setUserNm("È«ww");
+		dataVo2.setUserNm("í™ww");
 		dataVo2.setEmailAddr("www@naver.com");
 		dataVo2.setPhonenum("");
 		
-		// 2) ÀÌ µ¥ÀÌÅÍµéÀ» ¾î¶»°Ô °¡Á®¿Í¾ßÇÒ±î?
-		// ¿©·¯°³ÀÇ µ¥ÀÌÅÍ¸¦ °¡Á®¿À·Á¸é -> ¹è¿­!
-		JSONArray jArray = new JSONArray(); //[{JSONObject} , ... , {JSONObect}]¸¦ ´ãÀ» °ø°£
-		//jObj.put("key", "value"); // ÀÏÀÏÈ÷ ³ÖÀ» ¼ö ¾øÀ¸´Ï, for¹®À» µ¹·Á¾ßÇÔ. ±×¸¦ À§ÇØ¼­´Â Vo¸¦ ¸®½ºÆ®È­ÇØ¾ßÇÔ.
+		// 2) ì´ ë°ì´í„°ë“¤ì„ ì–´ë–»ê²Œ ê°€ì ¸ì™€ì•¼í• ê¹Œ?
+		// ì—¬ëŸ¬ê°œì˜ ë°ì´í„°ë¥¼ ê°€ì ¸ì˜¤ë ¤ë©´ -> ë°°ì—´!
+		JSONArray jArray = new JSONArray(); //[{JSONObject} , ... , {JSONObect}]ë¥¼ ë‹´ì„ ê³µê°„
+		//jObj.put("key", "value"); // ì¼ì¼íˆ ë„£ì„ ìˆ˜ ì—†ìœ¼ë‹ˆ, forë¬¸ì„ ëŒë ¤ì•¼í•¨. ê·¸ë¥¼ ìœ„í•´ì„œëŠ” Voë¥¼ ë¦¬ìŠ¤íŠ¸í™”í•´ì•¼í•¨.
 		List<DataVO> dataVoList =  new ArrayList<>();
 		dataVoList.add(dataVo);
 		dataVoList.add(dataVo2);
 		
-		for(int i =0 ; i < dataVoList.size(); i++) { //ÃÑ µ¥ÀÌÅÍ ·®¸¸Å­
+		for(int i =0 ; i < dataVoList.size(); i++) { //ì´ ë°ì´í„° ëŸ‰ë§Œí¼
 			
 			JSONObject innerObj = new JSONObject();
 			innerObj.put("userNm", dataVoList.get(i).getUserNm());
 			innerObj.put("emailAddr", dataVoList.get(i).getEmailAddr());
-			innerObj.put("phonenum", dataVoList.get(i).getPhonenum()); //Object¸¦ ²Ù¸° ÈÄ,
-			jArray.add(innerObj); //ÇØ´ç ¿ÀºêÁ§Æ®¸¦ ¹è¿­·Î ³Ö¾îÁÜ.			
-		} //¿©±â±îÁöÇÏ¸é [ { vo1 } , { vo2 } ] °¡ µÇ¾ú´Ù.
+			innerObj.put("phonenum", dataVoList.get(i).getPhonenum()); //Objectë¥¼ ê¾¸ë¦° í›„,
+			jArray.add(innerObj); //í•´ë‹¹ ì˜¤ë¸Œì íŠ¸ë¥¼ ë°°ì—´ë¡œ ë„£ì–´ì¤Œ.			
+		} //ì—¬ê¸°ê¹Œì§€í•˜ë©´ [ { vo1 } , { vo2 } ] ê°€ ë˜ì—ˆë‹¤.
 		
-		//ÇØ´ç ¹è¿­À» ´Ù½Ã ÃÖÁ¾ json ¿¡ ³ÖÀ¸¸é,
+		//í•´ë‹¹ ë°°ì—´ì„ ë‹¤ì‹œ ìµœì¢… json ì— ë„£ìœ¼ë©´,
 		JSONObject returnObj = new JSONObject();
 		returnObj.put("resultData",jArray);
 		
-		// 2) À§ ·ÎÁ÷À» Á¤»óÃ³¸® ÇßÀ» °æ¿ì, resultCode¿Í resultMsg¸¦ ³Ö¾îÁØ´Ù.
+		// 2) ìœ„ ë¡œì§ì„ ì •ìƒì²˜ë¦¬ í–ˆì„ ê²½ìš°, resultCodeì™€ resultMsgë¥¼ ë„£ì–´ì¤€ë‹¤.
 		String resultCode = "0000";
-		String resultMsg = "Á¤»ó Ã³¸® µÇ¾ú½À´Ï´Ù.";
+		String resultMsg = "ì •ìƒ ì²˜ë¦¬ ë˜ì—ˆìŠµë‹ˆë‹¤.";
 		
 		returnObj.put("resultCode", resultCode);
 		returnObj.put("resultMsg", resultMsg);
 		System.out.println(returnObj);
 		
-		//Ãâ·Â¹°À» Á¤¸®ÇÏ¸é,
+		//ì¶œë ¥ë¬¼ì„ ì •ë¦¬í•˜ë©´,
 		/*
 		   {
 		  		"resultData":	[
 						  			{
-						  				"userNm":"À¯xx",
+						  				"userNm":"ìœ xx",
 						  				"emailAddr":"xxx@kico.co.kr",
 						  				"phonenum":"010-3258-xxxx"
 						  			},
 						  			{
-						  				"userNm":"È«ww",
+						  				"userNm":"í™ww",
 						  				"emailAddr":"www@naver.com",
 						  				"phonenum":""
 						  			}
 				  				],
 				 "resultCode":"0000",
-				 "resultMsg":"Á¤»ó Ã³¸® µÇ¾ú½À´Ï´Ù."}
+				 "resultMsg":"ì •ìƒ ì²˜ë¦¬ ë˜ì—ˆìŠµë‹ˆë‹¤."}
 
 		 */			
 		
