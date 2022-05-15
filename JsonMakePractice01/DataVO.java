@@ -3,11 +3,11 @@ package JsonMakePractice01;
 
 public class DataVO {
 	
-	public String resultCode;
-	public String resultMsg;	
-	public String userNm;
-	public String emailAddr;
-	public String phonenum;
+	private String resultCode;
+	private String resultMsg;	
+	private String userNm;
+	private String emailAddr;
+	private String phonenum;
 	
 	
 	public String getResultCode() {
